@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hangman Ultra</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- WELCOME PAGE -->
+<section id="welcomePage" class="page active">
+  <div class="card">
+    <h1 class="title glow">HANGMAN</h1>
+    <p class="floating">A B C D E F G</p>
+    <button class="btn" onclick="goToLogin()">START GAME</button>
+  </div>
+</section>
+
+<!-- LOGIN PAGE -->
+<section id="loginPage" class="page">
+  <div class="card">
+    <h2>Create Profile</h2>
+    <input id="name" placeholder="Name">
+    <input id="surname" placeholder="Surname">
+    <input id="age" type="number" placeholder="Age">
+    <select id="gender">
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+    <button class="btn" onclick="login()">LOGIN</button>
+  </div>
+</section>
+
+<!-- USER WELCOME PAGE -->
+<section id="userPage" class="page">
+  <div class="card">
+    <h2 id="welcomeText" class="glow"></h2>
+  </div>
+</section>
+
+<!-- DIFFICULTY PAGE -->
+<section id="difficultyPage" class="page">
+  <div class="card">
+    <h2>Select Difficulty</h2>
+    <button class="btn" onclick="selectDifficulty('easy')">Easy</button>
+    <button class="btn" onclick="selectDifficulty('medium')">Medium</button>
+    <button class="btn" onclick="selectDifficulty('hard')">Hard</button>
+
+    <h3>Settings</h3>
+    <button class="btn" onclick="toggleTheme()" id="themeBtn">🌙 Dark</button>
+    <button class="btn" onclick="toggleSound()" id="soundBtn">🔊 ON</button>
+  </div>
+</section>
+
+<!-- LEVEL PAGE -->
+<section id="levelPage" class="page">
+  <div class="card">
+    <h2>Select Level</h2>
+    <div id="levelsContainer"></div>
+    <button class="btn back-btn" onclick="backToDifficulty()">← Back</button>
+  </div>
+</section>
+
+<!-- GAME PAGE -->
+<section id="gamePage" class="page">
+  <div class="card">
+    <img id="hangmanImg" src="assets/images/hangman0.png">
+    <h2 id="wordDisplay"></h2>
+    <div id="keyboard"></div>
+    <p>Attempts: <span id="attempts">6</span></p>
+    <button class="btn" onclick="useHint()" id="hintBtn">💡 Hint</button>
+    <p>Hints: <span id="hintCount">2</span></p>
+
+    <div id="gameButtons" class="hidden">
+      <button class="btn" onclick="retryLevel()">Retry</button>
+      <button class="btn" onclick="goHome()">Home</button>
+    </div>
+
+    <button class="btn exit-btn" onclick="exitGame()">EXIT</button>
+    <button class="btn back-btn" onclick="goBack()">← Back</button>
+  </div>
+</section>
+
+<!-- WIN POPUP -->
+<div id="winPopup" class="popup hidden">
+  <div class="card win">
+    <h2>🎉 YOU WIN 🎉</h2>
+    <button class="btn" onclick="nextLevel()">Next</button>
+    <button class="btn" onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
