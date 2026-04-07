@@ -9,10 +9,35 @@ const winSound = new Audio("assets/sounds/win.mp3");
 const loseSound = new Audio("assets/sounds/lose.mp3");
 
 /* WORDS */
-const words={
-  easy:["cat","dog","sun","ball","tree","fish"],
-  medium:["apple","chair","table","pencil","house","mouse"],
-  hard:["javascript","developer","hangman","function","variable"]
+const words = {
+
+  easy: [
+    "cat","dog","sun","hat","bat","rat","pen","cup","fan","box",
+    "key","bag","map","toy","jam","car","bus","cap","gum","web",
+    "pig","cow","hen","ant","bee","owl","fox","sky","sea","mud",
+    "red","ice","run","top","bed","egg","ink","lid","log","net",
+    "pot","zip","van","wax","yak","zen","tap","lip","sip","dip"
+  ],
+
+  medium: [
+    "apple","chair","table","pencil","orange","banana","window","garden","school","planet",
+    "flower","bottle","camera","guitar","letter","laptop","pillow","market","river","butter",
+    "pocket","button","ticket","circle","square","bridge","coffee","castle","violin","mirror",
+    "basket","doctor","engine","family","future","golden","hunter","island","jungle","kitten",
+    "leader","memory","nature","object","people","queen","rocket","silver","travel","writer"
+  ],
+
+  hard: [
+    "javascript","developer","computer","function","variable","algorithm","browser","network",
+    "database","interface","software","keyboard","monitor","programming","framework",
+    "application","iteration","exception","compiler","object","inheritance","prototype",
+    "asynchronous","callback","encapsulation","polymorphism","abstraction","recursion",
+    "parameter","constructor","synchronization","optimization","virtualization","cybersecurity",
+    "architecture","multithreading","encryption","decryption","debugging","deployment",
+    "scalability","performance","integration","automation","configuration","documentation",
+    "authentication","authorization","microservices","datastream"
+  ]
+
 };
 
 /* WELCOME PHRASES */
